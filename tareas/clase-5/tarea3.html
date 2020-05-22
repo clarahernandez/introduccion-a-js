@@ -3,7 +3,26 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
+        <title>Tarea 3</title>
     </head>
-    <body></body>
+    <body>
+        <h1>Calculadora de tiempo.</h1>
+        <div>
+            <p>Complete el formulario, al apretar calcular se suman las horas.</p>
+            <form>
+                <label for="cantidad-videos">Hora:</label>
+                <input type="number" id="horas" required placeholder="2" /> <br />
+                <label for="cantidad-videos">Minutos:</label>
+                <input type="number" id="minutos" required placeholder="55" /> <br />
+                <label for="cantidad-videos">Segundos:</label>
+                <input type="number" id="segundos" required placeholder="34" /> <br />
+
+                <input type="submit" value="Calcular" id="calcular-tiempo" />
+                <button type="reset" id="reset-tiempo">Reset tiempo</button>
+            </form>
+            <div id="resultado"></div>
+        </div>
+
+        <script src="tarea3.js"></script>
+    </body>
 </html>
