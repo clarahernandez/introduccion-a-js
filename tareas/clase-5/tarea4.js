@@ -5,3 +5,5 @@ let i, suma;
 for (i = 0, suma = 0; i < listaNumeros.length; i++) {
     suma += Number(listaNumeros[i].innerText);
 }
+
+console.log(suma);
