@@ -1,3 +1,9 @@
-body {
+form {
+    margin: 10px;
+    padding: 10px;
+}
+
+h1,
+p {
     text-align: center;
 }
