@@ -4,14 +4,25 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
+        <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css" />
     </head>
     <body>
-        <form>
-            <label for="nombre-usuario">Ingresa tu nombre completo:</label>
-            <input type="text" placeholder="Juan Pedro Hernández" id="nombre-usuario" />
-            <label for="edad-usuario">Ingresá tu edad</label>
-            <input type="number" placeholder="20" id="edad-usuario" />
-            <input type="submit" value="Mostrar" id="mostrar-texto" />
+        <form class="form-group">
+            <div>
+                <label for="nombre-usuario">Ingresa tu nombre completo:</label>
+                <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Juan Pedro Hernández"
+                    id="nombre-usuario"
+                />
+            </div>
+            <div>
+                <label for="edad-usuario">Ingresá tu edad</label>
+                <input type="number" class="form-control" placeholder="20" id="edad-usuario" />
+            </div>
+            <br />
+            <button type="submit" class="btn btn-primary" id="mostrar-texto">Mostrar</button>
         </form>
 
         <h1>Bienvenido!</h1>
