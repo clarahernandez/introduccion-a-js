@@ -12,12 +12,17 @@
     </head>
     <body>
         <form id="calculador-salario-anual">
-            <label for="salario-anual">Ingresá tu salario anual</label>
-            <input type="number" placeholder="10000" id="salario-anual" />
-            <input type="submit" value="Calcular" id="calcular" />
-            <label for="salario-mensual">Tu salario mensual es:</label>
-            <input type="text|" disabled id="salario-mensual" />
+            <div class="form-group">
+                <label for="salario-anual">Ingresá tu salario anual</label>
+                <input type="number" placeholder="10000" class="form-control" id="salario-anual" />
+            </div>
+            <button type="submit" id="calcular" class="btn btn-primary">Calcular</button>
+            <div class="form-group">
+                <label for="salario-mensual">Tu salario mensual es:</label>
+                <input type="text|" class="form-control" disabled id="salario-mensual" />
+            </div>
         </form>
+
         <script src="tarea-clase-5.js"></script>
     </body>
 </html>
