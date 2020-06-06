@@ -9,28 +9,99 @@
         <title>Tarea 3</title>
     </head>
     <body>
-        <h1>Calculadora de tiempo.</h1>
-        <div>
+        <div class="container">
+            <h1>Calculadora de tiempo.</h1>
             <p>Complete el formulario, al apretar calcular se suman las horas.</p>
-            <form class="form-group">
-                <div>
-                    <label for="cantidad-videos">Hora:</label>
-                    <input type="number" id="horas" required placeholder="2" /> <br />
+            <div class="row">
+                <div id="video1" class="col">
+                    <form class="form-group">
+                        <div>
+                            <label for="cantidad-videos">Hora:</label>
+                            <input type="number" class="horas" required placeholder="2" />
+                        </div>
+                        <div>
+                            <label for="cantidad-videos">Minutos:</label>
+                            <input type="number" class="minutos" required placeholder="55" />
+                        </div>
+                        <div>
+                            <label for="cantidad-videos">Segundos:</label>
+                            <input type="number" class="segundos" required placeholder="34" />
+                        </div>
+                    </form>
                 </div>
-                <div>
-                    <label for="cantidad-videos">Minutos:</label>
-                    <input type="number" id="minutos" required placeholder="55" /> <br />
+
+                <div id="video2" class="col">
+                    <form class="form-group">
+                        <div>
+                            <label for="cantidad-videos">Hora:</label>
+                            <input type="number" class="horas" required placeholder="2" />
+                        </div>
+                        <div>
+                            <label for="cantidad-videos">Minutos:</label>
+                            <input type="number" class="minutos" required placeholder="55" />
+                        </div>
+                        <div>
+                            <label for="cantidad-videos">Segundos:</label>
+                            <input type="number" class="segundos" required placeholder="34" />
+                        </div>
+                    </form>
                 </div>
-                <div>
-                    <label for="cantidad-videos">Segundos:</label>
-                    <input type="number" id="segundos" required placeholder="34" /> <br />
+
+                <div id="video3" class="col">
+                    <form class="form-group">
+                        <div>
+                            <label for="cantidad-videos">Hora:</label>
+                            <input type="number" class="horas" required placeholder="2" />
+                        </div>
+                        <div>
+                            <label for="cantidad-videos">Minutos:</label>
+                            <input type="number" class="minutos" required placeholder="55" />
+                        </div>
+                        <div>
+                            <label for="cantidad-videos">Segundos:</label>
+                            <input type="number" class="segundos" required placeholder="34" />
+                        </div>
+                    </form>
                 </div>
-                <input type="submit" value="Calcular" id="calcular-tiempo" />
-                <button type="reset" id="reset-tiempo">Reset tiempo</button>
-            </form>
+
+                <div id="video4" class="col">
+                    <form class="form-group">
+                        <div>
+                            <label for="cantidad-videos">Hora:</label>
+                            <input type="number" class="horas" required placeholder="2" />
+                        </div>
+                        <div>
+                            <label for="cantidad-videos">Minutos:</label>
+                            <input type="number" class="minutos" required placeholder="55" />
+                        </div>
+                        <div>
+                            <label for="cantidad-videos">Segundos:</label>
+                            <input type="number" class="segundos" required placeholder="34" />
+                        </div>
+                    </form>
+                </div>
+
+                <div id="video5" class="col">
+                    <form class="form-group">
+                        <div>
+                            <label for="cantidad-videos">Hora:</label>
+                            <input type="number" class="horas" required placeholder="2" />
+                        </div>
+                        <div>
+                            <label for="cantidad-videos">Minutos:</label>
+                            <input type="number" class="minutos" required placeholder="55" />
+                        </div>
+                        <div>
+                            <label for="cantidad-videos">Segundos:</label>
+                            <input type="number" class="segundos" required placeholder="34" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <button type="submit" id="calcular-tiempo">Calcular tiempo total</button>
+            <button type="reset" id="reset-tiempo">Reset tiempo</button>
             <div id="resultado"></div>
         </div>
-
         <script src="tarea3.js"></script>
     </body>
 </html>

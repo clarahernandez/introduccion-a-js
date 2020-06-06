@@ -1,34 +1,39 @@
-let horasTotales = 0;
-let minutosTotales = 0;
-let segundosTotales = 0;
-
-const $botonAgregarVideo = document.querySelector('#calcular-tiempo');
-const $botonResetTiempo = document.querySelector('#reset-tiempo');
+const $calcularTiempo = document.querySelector('#calcular-tiempo');
+const $resetearTiempo = document.querySelector('#reset-tiempo');
 
 const $resultado = document.querySelector('#resultado');
 
-$botonAgregarVideo.onclick = function () {
-    let $horasAux, $minutosAux, $segundosAux;
+$calcularTiempo.onclick = function () {
+    const $listaHoras = document.querySelectorAll('.horas');
+    const $listaMinutos = document.querySelectorAll('.minutos');
+    const $listaSegundos = document.querySelectorAll('.segundos');
 
-    $minutosAux = Number(document.querySelector('#minutos').value);
-    $segundosAux = Number(document.querySelector('#segundos').value);
-    $horasAux = Number(document.querySelector('#horas').value);
+    let segundos = 0;
+    let minutos = 0;
+    let horas = 0;
+    $listaSegundos.forEach(($segundosVideo) => {
+        segundos = segundos + Number($segundosVideo.value);
+    });
 
-    segundosTotales = $segundosAux % 60;
+    $listaMinutos.forEach(($minutosVideo) => {
+        minutos = minutos + Number($minutosVideo.value);
+    });
 
-    minutosAux = Math.floor($segundosAux / 60) + $minutosAux;
-    minutosTotales = $minutosAux % 60;
+    minutos = Math.floor(segundos / 60) + minutos;
+    segundos = segundos % 60;
 
-    horasTotales = horasTotales + $horasAux + Math.floor($minutosAux / 60);
+    $listaHoras.forEach(($horasVideo) => {
+        horas = horas + Number($horasVideo.value);
+    });
 
-    $resultado.innerText = `El total de tiempo fue ${horasTotales} horas, ${minutosTotales} minutos y ${segundosTotales} segundos.`;
+    horas = horas + Math.floor(minutos / 60);
+    minutos = minutos % 60;
+
+    $resultado.innerText = `El total de tiempo fue ${horas} horas, ${minutos} minutos y ${segundos} segundos.`;
 
     return false;
 };
 
-$botonResetTiempo.onclick = function () {
-    horasTotales = 0;
-    minutosTotales = 0;
-    segundosTotales = 0;
+$resetearTiempo.onclick = function () {
     $resultado.innerText = '';
 };
